@@ -52,7 +52,7 @@
                                     <img src="{{ article.image.url }}" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <span>{{ article.category }}</span>
+                                    <span>{{ article.category.all.first }}</span>
                                     <a href="post-details.html"><h4>{{ article.title }}</h4></a>
                                     <ul class="post-info">
                                         <li><a href="#">{{ article.author }}</a></li>
@@ -93,7 +93,7 @@
 
                         <div class="col-lg-12">
                             <div class="main-button">
-                                <a href="blog.html">View All Posts</a>
+                                <a href="{% url 'blog:list' %}">View All Posts</a>
                             </div>
                         </div>
                     </div>

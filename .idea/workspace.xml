@@ -5,18 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06a731ab-6772-4600-9f93-34bbdddc08f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/context_processors/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/context_processors/context_processors" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/article_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/article_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/standblog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/standblog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/files/articles/banner-item-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/files/articles/banner-item-05_sGKLteh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/files/articles/blog-post-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/files/articles/comment-author-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/articles/banner-item-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/articles/banner-item-06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/articles/blog-thumb-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/articles/blog-thumb-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +58,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo-2024-277/Desktop/django/shop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo-2024-277/Desktop/standblog&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -63,6 +69,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo-2024-277\Desktop\standblog\blog\templates\blog" />
       <recent name="C:\Users\Lenovo-2024-277\Desktop\standblog\account\static\account" />
       <recent name="C:\Users\Lenovo-2024-277\Desktop\standblog\account\templates\account" />
       <recent name="C:\Users\Lenovo-2024-277\Desktop\standblog\home\templates\home" />
@@ -124,7 +131,10 @@
       <workItem from="1731522035864" duration="5237000" />
       <workItem from="1731570415578" duration="16589000" />
       <workItem from="1731874367970" duration="405000" />
-      <workItem from="1731930873928" duration="6006000" />
+      <workItem from="1731930873928" duration="8627000" />
+      <workItem from="1731942373243" duration="1098000" />
+      <workItem from="1732049244139" duration="1462000" />
+      <workItem from="1732308056950" duration="1176000" />
     </task>
     <servers />
   </component>
