@@ -1,5 +1,0 @@
-from blug.models import Article
-
-
-
-def reverse
