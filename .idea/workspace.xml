@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06a731ab-6772-4600-9f93-34bbdddc08f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/context_processors/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/context_processors/context_processors" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/footer_refrences.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/head_refrences.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/includes/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/article_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/article_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/files/articles/banner-item-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/files/articles/banner-item-05_sGKLteh.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/files/articles/blog-post-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/files/articles/comment-author-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/articles/banner-item-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/articles/banner-item-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/articles/blog-thumb-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/images/articles/blog-thumb-04.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +27,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "zarrroshin"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/zarrroshin/BLOG.git",
+    "accountId": "611aa8c2-0f16-4691-b817-2f934bda6fe8"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -57,7 +57,7 @@
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo-2024-277/Desktop/standblog&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -135,6 +135,7 @@
       <workItem from="1731942373243" duration="1098000" />
       <workItem from="1732049244139" duration="1462000" />
       <workItem from="1732308056950" duration="1176000" />
+      <workItem from="1732541909528" duration="738000" />
     </task>
     <servers />
   </component>
