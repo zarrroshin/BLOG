@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06a731ab-6772-4600-9f93-34bbdddc08f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/includes/sidebar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/context_processors/context_processors.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/article-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/article-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/article_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/article_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/standblog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/standblog/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/sidebar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +134,7 @@
       <workItem from="1731942373243" duration="1098000" />
       <workItem from="1732049244139" duration="1462000" />
       <workItem from="1732308056950" duration="1176000" />
-      <workItem from="1732541909528" duration="1737000" />
+      <workItem from="1732541909528" duration="2351000" />
     </task>
     <servers />
   </component>
