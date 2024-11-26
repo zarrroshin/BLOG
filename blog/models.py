@@ -9,6 +9,8 @@ from django.urls import reverse
 class Category(models.Model):
     name = models.CharField(max_length=50)
     created = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField(unique=True,null=False,default='')
+
 
     def __str__(self):
         return self.name
@@ -31,7 +33,7 @@ class Article(models.Model):
         ('B','DJANGO')
     )
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    category = models.ManyToManyField(Category)
+    category = models.ManyToManyField(Category,related_name='articles')
     title = models.CharField(max_length=70,help_text='enter title',unique=True)
     body = models.TextField(choices=CHOICES)
     image = models.ImageField(upload_to='images/articles',unique_for_date='pop_date')

@@ -1,5 +1,7 @@
 from django.shortcuts import render,get_object_or_404
-from blog.models import Article
+from blog.models import Article, Category
+
+
 # Create your views here.
 def show(request,slug):
     article = get_object_or_404(Article,slug=slug)
@@ -8,4 +10,11 @@ def show(request,slug):
 
 def article_list(request):
     articles = Article.objects.all()
+    return render(request,'blog/article_list.html', context={'articles':articles})
+
+
+
+def category_detail(request,slug):
+    category = get_object_or_404(Category,slug=slug)
+    articles= category.articles.all()
     return render(request,'blog/article_list.html', context={'articles':articles})

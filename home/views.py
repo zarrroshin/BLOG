@@ -5,4 +5,9 @@ from django.urls import reverse
 def home(request):
     article = Article.objects.all()
     recent_articles = Article.objects.all()[:3]
-    return render(request,'home/index.html',context={'articles':article,'recent_articles':recent_articles})
+    return render(request,'home/index.html',context={'articles':article})
+
+
+def sidbar(request):
+    data = {'name':'Zahra'}
+    return render(request,'includes/sidebar.html',context=data)
