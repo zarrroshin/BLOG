@@ -65,13 +65,13 @@ class Article(models.Model):
         return reverse('blog:article_detail',kwargs={'slug':self.slug})
 
 
-class New(models.Model):
-    title= models.CharField(max_length=70)
-    des = models.TextField()
-
-    def __str__(self):
-        return self.title
-
-    def save(self, *args, **kwargs):
-        self.title = self.title.replace(" ","*")
-        super(New,self).save(*args, **kwargs)
+# class New(models.Model):
+#     title= models.CharField(max_length=70)
+#     des = models.TextField()
+#
+#     def __str__(self):
+#         return self.title
+#
+#     def save(self, *args, **kwargs):
+#         self.title = self.title.replace(" ","*")
+#         super(New,self).save(*args, **kwargs)
