@@ -53,16 +53,12 @@
                                 </div>
                                 <div class="down-content">
                                     <span>{{ article.category.all.first }}</span>
-                                    <a href="post-details.html"><h4>{{ article.title }}</h4></a>
+                                    <a href="{% url 'blog:article_detail' article.slug %}"><h4>{{ article.title }}</h4></a>
                                     <ul class="post-info">
                                         <li><a href="#">{{ article.author }}</a></li>
                                         <li><a href="#">{{ article.created}}</a></li>
                                         <li><a href="#">12 Comments</a></li>
-                                    </ul>
-                                    <p>Stand Blog is a free HTML CSS template for your CMS theme. You can easily adapt
-                                        or customize it for any kind of CMS or website builder. You are allowed to use
-                                        it for your business. You are NOT allowed to re-distribute the template ZIP file
-                                        on any template collection site for the download purpose. <a rel="nofollow"
+                                    </ul> <a rel="nofollow"
                                                                                                      href="https://templatemo.com/contact"
                                                                                                      target="_parent">Contact
                                             TemplateMo</a> for more info. Thank you.</p>

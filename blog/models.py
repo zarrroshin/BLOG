@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.db.models import Model
 from django.utils import timezone
 from django.urls import reverse
 
@@ -75,3 +76,13 @@ class Article(models.Model):
 #     def save(self, *args, **kwargs):
 #         self.title = self.title.replace(" ","*")
 #         super(New,self).save(*args, **kwargs)
+
+class Comment(models.Model):
+    article = models.ForeignKey(Article,on_delete=models.CASCADE,related_name='comments')
+    user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='comments')
+    body = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    parent  = models.ForeignKey('self',null=True,blank=True,related_name='replies',on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.body[:50]
