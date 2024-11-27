@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from blog.models import Article, Category, Comment
+from blog.models import Article, Category, Comment,Message
 from django.core.paginator import Paginator
-from .forms import ContactUsForm
+from .forms import ContactUsForm,MessagesForm
 # Create your views here.
 def show(request,slug):
     article = get_object_or_404(Article,slug=slug)
@@ -37,9 +37,18 @@ def search(request):
 
 def contactus(request):
     if request.method == 'POST':
-        form = ContactUsForm(request.POST)
+        form = MessagesForm(data=request.POST)
         if form.is_valid():
-            print(form.cleaned_data['text'])
-            return redirect('home:home')
-    form = ContactUsForm()
+            # title = form.cleaned_data['title']
+            # email = form.cleaned_data['email']
+            # text = form.cleaned_data['text']
+            # Message.objects.create(title=title,email=email,text=text)
+
+
+
+            #instance = form.save(commit=False) if you want to make some changes and then save the instance
+
+            form.save()
+    else:
+        form = MessagesForm()
     return render(request,'blog/contact.html',{'form':form})

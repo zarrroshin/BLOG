@@ -36,7 +36,8 @@ class Article(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ManyToManyField(Category,related_name='articles')
     title = models.CharField(max_length=70,help_text='enter title',unique=True)
-    body = models.TextField(choices=CHOICES)
+    #body = models.TextField(choices=CHOICES)
+    body = models.TextField()
     image = models.ImageField(upload_to='images/articles',unique_for_date='pop_date')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -54,7 +55,7 @@ class Article(models.Model):
 
 
     def __str__(self):
-        return self.title+ "-" + self.body
+        return self.title
 
 
     def save(self, *args, **kwargs):
@@ -86,3 +87,15 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.body[:50]
+
+
+class Message(models.Model):
+    title = models.CharField(max_length=100)
+    text = models.TextField()
+    email = models.EmailField(max_length=70)
+    # age = models.IntegerField(default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    # date = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.title

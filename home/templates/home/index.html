@@ -58,10 +58,8 @@
                                         <li><a href="#">{{ article.author }}</a></li>
                                         <li><a href="#">{{ article.created}}</a></li>
                                         <li><a href="#">12 Comments</a></li>
-                                    </ul> <a rel="nofollow"
-                                                                                                     href="https://templatemo.com/contact"
-                                                                                                     target="_parent">Contact
-                                            TemplateMo</a> for more info. Thank you.</p>
+                                    </ul>
+                                    <p>{{ article.body|truncatewords:70 }}</p>
                                     <div class="post-options">
                                         <div class="row">
                                             <div class="col-6">
