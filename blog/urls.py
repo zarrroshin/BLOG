@@ -8,4 +8,5 @@ urlpatterns =[
     path('list',views.article_list,name='list'),
     path('category/<slug:slug>', views.category_detail,name='category_list'),
     path('search/',views.search,name='search'),
+    path('contact',views.contactus,name='contact'),
 ]
