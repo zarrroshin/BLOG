@@ -29,4 +29,8 @@ def category_detail(request,slug):
 
 def search(request):
     q = request.GET.get('q')
-    articles = Article.objects.filter(title__contains=q)
+    articles = Article.objects.filter(title__icontains=q)
+    paginator = Paginator(articles, 1)
+    page = request.GET.get('page')
+    object_list = paginator.get_page(page)
+    return render(request,'blog/article_list.html', context={'articles':object_list})
