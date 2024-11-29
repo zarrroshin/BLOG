@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect, HttpResponse
 from blog.models import Article, Category, Comment, Message
 from django.core.paginator import Paginator
 from .forms import ContactUsForm, MessagesForm
-from django.views.generic.base import View
+from django.views.generic.base import View, TemplateView, RedirectView
 
 from django.views.generic import ListView
 
@@ -90,7 +90,28 @@ class ArticleListView(ListView):
         return render(request, self.template_name, context={'articles': object_list})
 
 
-
 class UserList(ListView):
-    queryset =  User.objects.all()
+    queryset = User.objects.all()
     template_name = 'blog/user_list.html'
+
+
+# class ArticleListView(TemplateView):
+#     template_name = 'blog/article_list.html'
+#
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['object_list'] = Article.objects.all()
+#         return context
+
+
+class HomePageRedirect(RedirectView):
+    # url = "/"
+    pattern_name = 'blog:list'
+    permanent = False
+    query_string = True
+    def get_redirect_url(self,*args, **kwargs):
+        print(self.request.user.username)
+        return super().get_redirect_url(*args,**kwargs)
+
+
