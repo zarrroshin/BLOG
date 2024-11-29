@@ -1,31 +1,38 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from blog.models import Article, Category, Comment,Message
+from django.contrib.auth.models import User
+from django.shortcuts import render, get_object_or_404, redirect, HttpResponse
+from blog.models import Article, Category, Comment, Message
 from django.core.paginator import Paginator
-from .forms import ContactUsForm,MessagesForm
+from .forms import ContactUsForm, MessagesForm
+from django.views.generic.base import View
+
+from django.views.generic import ListView
+
+
 # Create your views here.
-def show(request,slug):
-    article = get_object_or_404(Article,slug=slug)
+def show(request, slug):
+    article = get_object_or_404(Article, slug=slug)
     if request.method == 'POST':
         body = request.POST['body']
         parent = request.POST['parent_id']
         user = request.user
-        Comment.objects.create(body=body,user=user,article=article,parent_id=parent)
-    return  render(request, 'blog/article-details.html', context={'article':article})
+        Comment.objects.create(body=body, user=user, article=article, parent_id=parent)
+    return render(request, 'blog/article-details.html', context={'article': article})
 
 
-def article_list(request):
-    articles = Article.objects.all()
-    paginator = Paginator(articles, 1)
-    page = request.GET.get('page')
-    object_list = paginator.get_page(page)
-    return render(request,'blog/article_list.html', context={'articles':object_list})
+# def article_list(request):
+#     articles = Article.objects.all()
+#     paginator = Paginator(articles, 1)
+#     page = request.GET.get('page')
+#     object_list = paginator.get_page(page)
+#     return render(request,'blog/article_list.html', context={'articles':object_list})
+#
 
 
+def category_detail(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    articles = category.articles.all()
+    return render(request, 'blog/article_list.html', context={'articles': articles})
 
-def category_detail(request,slug):
-    category = get_object_or_404(Category,slug=slug)
-    articles= category.articles.all()
-    return render(request,'blog/article_list.html', context={'articles':articles})
 
 def search(request):
     q = request.GET.get('q')
@@ -33,7 +40,8 @@ def search(request):
     paginator = Paginator(articles, 1)
     page = request.GET.get('page')
     object_list = paginator.get_page(page)
-    return render(request,'blog/article_list.html', context={'articles':object_list})
+    return render(request, 'blog/article_list.html', context={'articles': object_list})
+
 
 def contactus(request):
     if request.method == 'POST':
@@ -44,11 +52,45 @@ def contactus(request):
             # text = form.cleaned_data['text']
             # Message.objects.create(title=title,email=email,text=text)
 
-
-
-            #instance = form.save(commit=False) if you want to make some changes and then save the instance
+            # instance = form.save(commit=False) if you want to make some changes and then save the instance
 
             form.save()
     else:
         form = MessagesForm()
-    return render(request,'blog/contact.html',{'form':form})
+    return render(request, 'blog/contact.html', {'form': form})
+
+
+# class TestBaseView(View):
+#     name = "zarr"
+#     def get(self, request):
+#         return HttpResponse(self.name)
+#
+#
+#
+# class HelloToName(TestBaseView):
+
+
+# class ListView(View):
+#     queryset = None
+#     template_name = None
+#
+#     def get(self, request):
+#         return render(request, self.template_name, context={'object_list': self.queryset})
+
+
+class ArticleListView(ListView):
+    queryset = Article.objects.all()
+    template_name = 'blog/article_list.html'
+
+    def get(self, request):
+        articles = self.queryset
+        paginator = Paginator(articles, 1)
+        page = request.GET.get('page')
+        object_list = paginator.get_page(page)
+        return render(request, self.template_name, context={'articles': object_list})
+
+
+
+class UserList(ListView):
+    queryset =  User.objects.all()
+    template_name = 'blog/user_list.html'
