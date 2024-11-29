@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06a731ab-6772-4600-9f93-34bbdddc08f6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/account/templatetags/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/account/templatetags/filters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/home/result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templatetags/my_template_tags.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/home/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/home/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/standblog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/standblog/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/sidebar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -54,27 +49,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Django Server.standblog.executor": "Run",
-    "Python.tests.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Lenovo-2024-277/Desktop/standblog/blog/templates/blog",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "two.files.diff.last.used.file": "C:/Users/Lenovo-2024-277/Desktop/standblog/static/images/profile.jpg",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Django Server.standblog.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tests.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo-2024-277/Desktop/standblog/blog/templates/blog&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/Lenovo-2024-277/Desktop/standblog/static/images/profile.jpg&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo-2024-277\Desktop\standblog\blog\templates\blog" />
@@ -84,6 +79,7 @@
       <recent name="C:\Users\Lenovo-2024-277\Desktop\standblog\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo-2024-277\Desktop\standblog\home\templates\result" />
       <recent name="C:\Users\Lenovo-2024-277\Desktop\standblog\templates\includes" />
       <recent name="C:\Users\Lenovo-2024-277\Desktop\standblog" />
     </key>
@@ -177,7 +173,8 @@
       <workItem from="1732609397030" duration="1737000" />
       <workItem from="1732621093061" duration="6890000" />
       <workItem from="1732643641483" duration="5772000" />
-      <workItem from="1732653433871" duration="21848000" />
+      <workItem from="1732653433871" duration="26231000" />
+      <workItem from="1732897873200" duration="1605000" />
     </task>
     <servers />
   </component>
