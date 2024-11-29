@@ -4,8 +4,7 @@ from blog.models import Article, Category, Comment, Message
 from django.core.paginator import Paginator
 from .forms import ContactUsForm, MessagesForm
 from django.views.generic.base import View, TemplateView, RedirectView
-
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 
 # Create your views here.
@@ -16,7 +15,7 @@ def show(request, slug):
         parent = request.POST['parent_id']
         user = request.user
         Comment.objects.create(body=body, user=user, article=article, parent_id=parent)
-    return render(request, 'blog/article-details.html', context={'article': article})
+    return render(request, 'blog/article_detail.html', context={'article': article})
 
 
 # def article_list(request):
@@ -115,3 +114,15 @@ class HomePageRedirect(RedirectView):
         return super().get_redirect_url(*args,**kwargs)
 
 
+class ArticleDetailView(DetailView):
+    model = Article
+    #template_name = "blog/article_detailll.html default=model_detail
+    #context_object_name = 'article'
+    #slug_field = 'slug'
+    #slug_url_kwarg = 'item_slug'
+    # queryset = Article.objects.filter(published=True)
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['name']="amirhossein"
+    #     return context
