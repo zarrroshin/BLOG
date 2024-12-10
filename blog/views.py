@@ -4,7 +4,7 @@ from blog.models import Article, Category, Comment, Message
 from django.core.paginator import Paginator
 from .forms import ContactUsForm, MessagesForm
 from django.views.generic.base import View, TemplateView, RedirectView
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView,FormView,CreateView,UpdateView,DeleteView
 
 
 # Create your views here.
@@ -126,3 +126,30 @@ class ArticleDetailView(DetailView):
     #     context = super().get_context_data(**kwargs)
     #     context['name']="amirhossein"
     #     return context
+
+
+class ContactUsView(FormView):
+    template_name = 'blog/contact.html'
+    form_class = MessagesForm
+    success_url = '/'
+
+    def form_valid(self, form):
+        form_data = form.cleaned_data
+        Message.objects.create(title=form_data['title'], text=form_data['text'], email=form_data['email'])
+        return super().form_valid(form)
+
+class MessageView(CreateView):
+    model = Message
+    fields = ['title', 'text']
+    success_url = '/'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['messages'] = Message.objects.all()
+        return context
+
+    def form_valid(self, form):
+        instance = form.save(commit=False)
+        instance.email = self.request.user.email
+        instance.save()
+        return super().form_valid(form)
+

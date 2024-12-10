@@ -11,7 +11,7 @@ urlpatterns = [
     path('list', views.ArticleListView.as_view(), name='list'),
     path('category/<slug:slug>', views.category_detail, name='category_list'),
     path('search/', views.search, name='search'),
-    path('contact', views.contactus, name='contact'),
+    path('contact', views.MessageView.as_view(), name='contact'),
     path('users', views.UserList.as_view(), name='user_list'),
 
 
