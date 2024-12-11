@@ -7,8 +7,7 @@ from django.core.paginator import Paginator
 from .forms import ContactUsForm, MessagesForm
 from django.views.generic.base import View, TemplateView, RedirectView
 from django.views.generic import ListView, DetailView,FormView,CreateView,UpdateView,DeleteView,ArchiveIndexView
-
-
+from .mixins import LoginRequiredMixin
 # Create your views here.
 def show(request, slug):
     article = get_object_or_404(Article, slug=slug)
@@ -79,7 +78,7 @@ def contactus(request):
 #         return render(request, self.template_name, context={'object_list': self.queryset})
 
 
-class ArticleListView(ListView):
+class ArticleListView(LoginRequiredMixin,ListView):
     queryset = Article.objects.all()
     template_name = 'blog/article_list.html'
 
