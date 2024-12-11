@@ -3,18 +3,19 @@ from django.db import models
 from django.db.models import Model
 from django.utils import timezone
 from django.urls import reverse
-
-
-
+from django.utils.html import format_html
 
 class Category(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50,verbose_name="عنوان")
     created = models.DateTimeField(auto_now_add=True)
     slug = models.SlugField(unique=True,null=False,default='')
 
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name = 'دسته بندی '
 
 
 
@@ -64,9 +65,17 @@ class Article(models.Model):
         super(Article,self).save(*args, **kwargs)
 
 
+    def show_image(self):
+        if self.image:
+            return format_html(f'<img src="{self.image.url}" width="60px" height="50px">')
+        return format_html('<h3 style="color:red">تصویر ندارد </h3>')
     def get_absolute_url(self):
         return reverse('blog:article_detail',kwargs={'slug':self.slug})
 
+  #  def print_title(self):
+     #  return  self.title
+
+ #   print_title.short_description = "چاپ عنوان "
 
 # class New(models.Model):
 #     title= models.CharField(max_length=70)

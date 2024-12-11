@@ -77,8 +77,9 @@ def contactus(request):
 #     def get(self, request):
 #         return render(request, self.template_name, context={'object_list': self.queryset})
 
+#class ArticleListView(LoginRequiredMixin,ListView):
 
-class ArticleListView(LoginRequiredMixin,ListView):
+class ArticleListView(ListView):
     queryset = Article.objects.all()
     template_name = 'blog/article_list.html'
 
