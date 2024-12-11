@@ -17,4 +17,9 @@ urlpatterns = [
 
     # path('testbase',views.TestBaseView.as_view(),name='test_base'),
     path('red', views.HomePageRedirect.as_view(), name='redirect'),
+    path('messages', views.MessageListView.as_view(), name='message_list'),
+    path('message/edit/<int:pk>', views.MessageUpdateView.as_view(), name='message_edit'),
+    path('message/delete/<int:pk>', views.MessageDeleteView.as_view(), name='message_delete'),
+    path('archive', views.ArchiveIndexArticleView.as_view(), name='archive'),
+
 ]

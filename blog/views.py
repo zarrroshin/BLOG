@@ -1,10 +1,12 @@
 from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404, redirect, HttpResponse
+from django.urls import reverse, reverse_lazy
+
 from blog.models import Article, Category, Comment, Message
 from django.core.paginator import Paginator
 from .forms import ContactUsForm, MessagesForm
 from django.views.generic.base import View, TemplateView, RedirectView
-from django.views.generic import ListView, DetailView,FormView,CreateView,UpdateView,DeleteView
+from django.views.generic import ListView, DetailView,FormView,CreateView,UpdateView,DeleteView,ArchiveIndexView
 
 
 # Create your views here.
@@ -152,4 +154,20 @@ class MessageView(CreateView):
         instance.email = self.request.user.email
         instance.save()
         return super().form_valid(form)
+class MessageListView(ListView):
+    model = Message
 
+class MessageUpdateView(UpdateView):
+    model = Message
+    fields = ('title', 'text')
+    template_name = 'blog/message_update_form.html'
+    success_url = reverse_lazy('blog:message_list')
+
+class MessageDeleteView(DeleteView):
+    model = Message
+    success_url = reverse_lazy('blog:message_list')
+
+
+class ArchiveIndexArticleView(ArchiveIndexView):
+    model = Article
+    date_field = "pub_date"

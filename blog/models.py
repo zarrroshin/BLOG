@@ -48,6 +48,7 @@ class Article(models.Model):
     objects = models.Manager()
     custom = ArticleManager()
     slug = models.SlugField(unique=True,null=True,blank=True)
+    pub_date = models.DateField(default=timezone.now())
 
     class Meta:
         ordering = ['-updated',]
@@ -99,3 +100,4 @@ class Message(models.Model):
 
     def __str__(self):
         return self.title
+
